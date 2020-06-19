@@ -4,7 +4,7 @@ Creates with given search query a random album playlist.
 * Works with any search query
 * Two types of random albums (once and repeatble)
 * Search for >50 possible albums
-* Clear the old playlist tracks automatically 
+* Clear the old playlist tracks automatically
 
 # Requirments
 
@@ -64,6 +64,30 @@ if (isset($_GET['code'])) {
     die();
 }
 ```
+
+# Extras
+
+### Use an array of albums instead of search query
+
+```php
+$alums_list = [ "albumID1", "albumID2", ... ];
+
+(new SpotifyRandomAlbum\RandomAlbum($api))->createRandomAlbum(
+    'YOUR SPOTIFY SEARCH QUERY',
+    "SPOTIFY_PLAYLIST_URI",
+    array('albums'=>$album_list)
+);
+```
+
+### For more than one search query per playlist use an random array:
+
+```php
+$rand_albums = array_rand([
+        "searchQuery1",
+        "searchQuery2",
+])
+```
+
 # License
 
 GNU GENERAL PUBLIC LICENSE V2
