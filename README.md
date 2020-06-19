@@ -23,7 +23,7 @@ For example I created with this code some **german** random audio playbook playl
 # Preparation 
 
 1. Create an app at [Spotify’s developer site](https://developer.spotify.com)
-2. Create new public/private album on Spotify
+2. Create new public/private album on Spotify and copy playlist uri via share button
 3. Install *composer* and this package:
 ```composer require bitnulleins/spotify-random-album```
 4. Create a [search query](https://support.spotify.com/us/article/search/) for Spotify.
@@ -50,7 +50,7 @@ if (isset($_GET['code'])) {
 
     (new SpotifyRandomAlbum\RandomAlbum($api))->createRandomAlbum(
         'YOUR SPOTIFY SEARCH QUERY',
-        "spotify:playlist:PLAYLIST_ID"
+        "YOUR_PLAYLIST_URI"
     );
 } else {
     $options = [
