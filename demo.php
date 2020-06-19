@@ -1,6 +1,5 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-//require 'src/RandomAlbum.php';
 
 $session = new SpotifyWebAPI\Session(
     'CLIENT_ID',
