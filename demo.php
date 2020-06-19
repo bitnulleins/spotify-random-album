@@ -15,7 +15,7 @@ if (isset($_GET['code'])) {
 
     (new SpotifyRandomAlbum\RandomAlbum($api))->createRandomAlbum(
         'YOUR SPOTIFY SEARCH QUERY',
-        "spotify:playlist:PLAYLIST_ID"
+        "SPOTIFY_PLAYLIST_URI"
     );
 } else {
     $options = [
