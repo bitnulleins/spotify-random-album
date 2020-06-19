@@ -1,0 +1,24 @@
+{
+    "name": "bitnulleins/spotify-random-album",
+    "description": "Generates for given search query a random album on spotify.",
+    "version": "1.0",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["spotify"],
+    "homepage": "https://github.com/bitnulleins/spotify-random-album",
+    "authors": [
+        {
+            "name": "Finn Dohrn",
+            "email": "hello@bit01.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SpotifyRandomAlbum\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "jwilsson/spotify-web-api-php": "^3.4"
+    }
+}
