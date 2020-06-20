@@ -130,7 +130,11 @@ class RandomAlbum
      * @return mixed
      */
     protected function addPlaylist($playlistID, $tracks) {
-        return $this->api->addPlaylistTracks($playlistID, $tracks);
+        $this->api->addPlaylistTracks($playlistID, array_slice($tracks, 0, 100));
+        if (sizeof($tracks) > 100) {
+            $tailTracks = array_splice($tracks, 0, 100);
+            $this->addPlaylist($playlistID, $tailTracks);
+        }
     }
 
     /**
