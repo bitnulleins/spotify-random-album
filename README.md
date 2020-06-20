@@ -1,6 +1,8 @@
 # Spotify Random Album
 Creates with given search query a random album playlist.
 
+![Licence](https://img.shields.io/packagist/l/bitnulleins/spotify-random-album) ![Downloads](https://img.shields.io/packagecontrol/dt/spotify-random-album) ![Version](https://img.shields.io/packagist/v/bitnulleins/spotify-random-album)
+
 * Works with any search query
 * Two types of random albums (once and repeatble)
 * Search for >50 possible albums
