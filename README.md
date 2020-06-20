@@ -70,7 +70,7 @@ if (isset($_GET['code'])) {
 ### Use an array of albums instead of search query
 
 ```php
-$alums_list = [ "albumID1", "albumID2", ... ];
+$albums = [ "albumID1", "albumID2", ... ];
 
 (new SpotifyRandomAlbum\RandomAlbum($api))->createRandomAlbum(
     'YOUR SPOTIFY SEARCH QUERY',
@@ -82,10 +82,12 @@ $alums_list = [ "albumID1", "albumID2", ... ];
 ### For more than one search query per playlist use an random array:
 
 ```php
-$rand_albums = array_rand([
+$queries = [
         "searchQuery1",
         "searchQuery2",
-])
+];
+$rand_query = $queries[array_rand($queries)];
+...
 ```
 
 # License
