@@ -77,18 +77,16 @@ class RandomAlbum
     private function selectAlbum($array, $option) {
         switch($option) {
             case 'random':
-                $result = $array[rand(0, sizeof($array)-1)];
+                $result = $array[array_rand($array)];
                 break;
-			case 'no_repeat':
-                if (($key = array_search($this->getAlbumIDByPlaylist($this->targetPlaylistID), $array)) !== false) {
-                    unset($array[$key]);
-                }
-
-				$randAlbumID = $array[rand(0, sizeof($array)-1)];
-				$result = $randAlbumID;
-				break;
+	case 'no_repeat':
+		if (($key = array_search($this->getAlbumIDByPlaylist($this->targetPlaylistID), $array)) !== false) {
+		    unset($array[$key]);
+		}
+		$result = $array[array_rand($array)];
+		break;
         }
-		return $result;
+	return $result;
     }
 
     /**
